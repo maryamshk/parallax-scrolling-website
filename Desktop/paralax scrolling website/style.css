@@ -14,6 +14,10 @@ body{
   overflow-x:hidden;
 }
 
+.ham{
+  margin-right: 4rem;
+}
+
 header{
   position:absolute;
   top:0;
@@ -60,6 +64,45 @@ header ul li a:hover,
 header ul li a.active{
   background: #fff;
   color:#2b1055;
+}
+
+.ham{
+margin-right: -5rem;
+color: #fff;
+z-index: 1000;
+}
+
+.hidden{
+  display: none !important;
+}
+
+#expend{
+    height: 300px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(86, 73, 142);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+
+#expend ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 10000;
+    opacity: 0;
 }
 
 
@@ -121,7 +164,7 @@ section img#mountains_front{
     background: #fff;
     color: #2b1055;
     font-size: 1.5em;
-    z-index: 9;
+    z-index: 11;
     transform:translateY(100px);
 }
 
@@ -140,4 +183,87 @@ section img#mountains_front{
 .sec p{
     font-size: 1em;
     color: #fff;
+}
+
+/* media queries */
+
+
+@media screen and (max-width: 1104px) {
+  .sec h2{
+    font-size: 2.7em; 
+}
+}
+
+
+@media screen and (max-width: 894px) {
+  .sec h2{
+    font-size: 2em;
+}
+}
+
+@media screen and (max-width: 800px) {
+  header .logo{
+    font-size: 1.4em;
+    margin-left: -5rem;
+  }
+
+  header ul{
+  margin-right: -5rem;
+  
+  }
+}
+
+@media screen and (max-width: 633px) {
+  .sec h2{
+    font-size: 1.5em;
+}
+}
+
+
+@media screen and (max-width: 600px) {
+  header ul li{
+    margin-left: 0;
+  }
+
+  header ul{
+    margin-right: -6.3rem;
+    
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+.sec{
+  padding: 50px;
+}
+
+
+.sec h2{
+  font-size: 1.3em;
+}
+
+.sec p{
+  font-size: .9em;
+  line-height: 2rem;
+
+}
+}
+
+
+@media screen and (max-width: 574px) {
+header ul{
+  display: none !important;
+} 
+
+ .hidden{
+  display: block !important;
+
+ }
+
+
+ #expend ul{
+  opacity: 1 !important; 
+ }
+
+
 }

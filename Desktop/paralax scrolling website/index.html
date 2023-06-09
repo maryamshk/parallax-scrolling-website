@@ -6,9 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Parallax Scrolling Website</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     </head>
 
     <body>
+
+        
         <header>
             <a href="#" class="logo">Logo</a>
             <ul>
@@ -17,7 +20,18 @@
                 <li><a href="#">Work</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
+
+            <i class="fa fa-bars ham hidden" id="hamm" aria-hidden="true"></i>
         </header>
+
+        <div id="expend">
+            <ul id="expul">
+                <li>Home</li>
+                <li>About</li>
+                <li>Work</li>
+                <li>Contact</li>
+            </ul>
+        </div>
 
         <section>
             <img src="stars.png" id="stars">
@@ -85,6 +99,37 @@
                 btn.style.marginTop = value * 1.5 + 'px';
                 header.style.top = value * 0.5 + 'px';
             })
+
+            // hamburger
+
+            let ham = document.getElementById('hamm');
+            let expend=document.getElementById('expend');
+            let expendul=document.getElementById('expul');
+            function toggleopacity(){
+                if(expend.style.opacity===1){
+                    expend.style.opacity=0;
+                }
+
+                else{
+                    expend.style.opacity=1;
+                }
+            }
+
+            function togglevisibility(){
+                if(expend.style.visibility==='hidden'){
+                    expend.style.visibility='visible';
+                }
+
+                else{
+                    expend.style.visibility='hidden';
+                }
+            }
+
+            ham.addEventListener('click', ()=>{
+                 toggleopacity();
+                 togglevisibility();
+            })
+
         </script>
 
 
